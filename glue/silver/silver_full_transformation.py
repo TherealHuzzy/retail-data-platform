@@ -87,7 +87,7 @@ REQUIRED_COLUMNS = {
         "product_description_lenght",
         "product_photos_qty",
         "product_weight_g",
-        "product_lenght_cm",
+        "product_length_cm",
         "product_height_cm",
         "product_width_cm"
         ],
@@ -236,7 +236,7 @@ def apply_business_rules(dataset, df):
         
         df = df.dropDuplicates(["product_id"])    
         df = df.filter(col("product_weight_g") > 0)
-        df = df.filter(col("product_lenght_cm") > 0)
+        df = df.filter(col("product_length_cm") > 0)
         df = df.filter(col("product_height_cm") > 0)
         df = df.filter(col("product_width_cm") > 0)
             
@@ -287,33 +287,35 @@ for dataset in datasets:
                 
             continue
             
-            rows_before = df.count()
+        rows_before = df.count()
             
-            # Generic cleaning
-            df = generic_clean(df)
+        # Generic cleaning
+        df = generic_clean(df)
             
-            # Dataset Business Rules 
-            df = apply_business_rules(dataset, df)
+        # Dataset Business Rules 
+        df = apply_business_rules(dataset, df)
             
-            rows_after = df.count()
-             
-            (df.write.mode("overwrite").parquet(output_path))
+        rows_after = df.count()
             
-            duration = time.time() - start_time
+        print(f"input_path: {input_path}")
+        print(f"output_path: {output_path}")
+        df.write.mode("overwrite").parquet(output_path)
             
-            record_metrics(
-                dataset,
-                rows_before,
-                rows_after,
-                "SUCCESS",
-                duration
-                )
+        duration = time.time() - start_time
             
-            log(f"Rows Before  : {rows_before}")
-            log(f"Rows After   : {rows_after}")
-            log(f"Rows Removed : {rows_before - rows_after}")
-            log(f"Duration     : {round(duration, 2)} sec")
-            log(f"{dataset} completed successfully.")
+        record_metrics(
+            dataset,
+            rows_before,
+            rows_after,
+            "SUCCESS",
+            duration
+            )
+            
+        log(f"Rows Before  : {rows_before}")
+        log(f"Rows After   : {rows_after}")
+        log(f"Rows Removed : {rows_before - rows_after}")
+        log(f"Duration     : {round(duration, 2)} sec")
+        log(f"{dataset} completed successfully.")
         
     except Exception as e:
             
