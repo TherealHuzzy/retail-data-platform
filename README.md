@@ -1,5 +1,6 @@
 
 # 🛒 Retail Data Platform on AWS
+
 ## End-to-End Cloud Data Engineering Project
  
 **Technologies:** AWS Glue • Amazon S3 • PySpark • Athena • CloudWatch • Tableau
@@ -19,7 +20,8 @@ The objective of this project is to centralize, transform, validate, monitor and
 to support reliable business intelligence and decision-making.
 # 🏗️ Solution Architecture
 
-![Architecture.png](attachment:Architecture.png)
+<img width="1536" height="1024" alt="Architecture" src="https://github.com/user-attachments/assets/9017d938-3e89-4efa-a31e-8983aef15dce" />
+
 
 Pipeline:
 
@@ -42,6 +44,7 @@ Monitoring:
 | Monitoring | Amazon CloudWatch |
 | Visualization | Tableau |
 | Programming | Python, SQL |
+
 # 🗂️ Dataset
 
 The solution uses the **Brazilian E-Commerce Public Dataset (Olist)** from Kaggle.
@@ -57,6 +60,7 @@ Included datasets:
 - Payments
 - Categories
 - Geolocation
+
 # 🥇 Medallion Architecture
 
 ### Bronze
@@ -73,6 +77,7 @@ Included datasets:
 - Fact and Dimension tables
 - Analytics-ready datasets
 - Optimized for reporting
+
 # ⚙️ ETL Workflow
 
 1. Ingest raw data into Amazon S3 Bronze.
@@ -94,6 +99,7 @@ Implemented validation rules:
 - Record count validation
 
 Quality metrics are published to **Amazon CloudWatch** for operational monitoring.
+
 # 📊 Monitoring
 
 CloudWatch monitors:
@@ -104,7 +110,9 @@ CloudWatch monitors:
 - Pipeline Runtime
 - CloudWatch Logs
 
-![Screenshot 2026-07-10 at 6.45.10 PM.png](<attachment:Screenshot 2026-07-10 at 6.45.10 PM.png>)
+<img width="1111" height="550" alt="Screenshot 2026-07-10 at 6 45 10 PM" src="https://github.com/user-attachments/assets/cefb1ea1-2354-49eb-8668-f9d22362e3db" />
+
+
 # 📈 Tableau Dashboard
 
 The executive dashboard provides:
@@ -118,7 +126,9 @@ The executive dashboard provides:
 - Top Product Categories
 - Top Selling Cities
 
-![Screenshot 2026-07-10 at 6.42.20 PM.png](<attachment:Screenshot 2026-07-10 at 6.42.20 PM.png>)
+<img width="1367" height="722" alt="Screenshot 2026-07-10 at 6 42 20 PM" src="https://github.com/user-attachments/assets/1b8c8301-fce6-4f63-9ee6-52a6110f330c" />
+
+
 # 💡 Key Achievements
 
 - End-to-end AWS Data Pipeline
@@ -128,6 +138,7 @@ The executive dashboard provides:
 - Data Quality Framework
 - CloudWatch Monitoring
 - Interactive Tableau Dashboard
+
 # 🚀 Future Enhancements
 
 - Change Data Capture (CDC)
@@ -136,6 +147,7 @@ The executive dashboard provides:
 - Terraform
 - GitHub Actions CI/CD
 - Apache Iceberg / Delta Lake
+
 # 🏁 Conclusion
 
 This project demonstrates practical cloud data engineering skills using AWS services and industry best practices.
