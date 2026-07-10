@@ -5,8 +5,6 @@
  
 **Technologies:** AWS Glue • Amazon S3 • PySpark • Athena • CloudWatch • Tableau
 
-> This notebook documents the architecture, implementation, monitoring, and analytics of an end-to-end retail data engineering platform built on AWS.
-
 
 # 📌 Executive Summary
 
