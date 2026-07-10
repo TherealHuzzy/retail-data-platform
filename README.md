@@ -28,6 +28,8 @@ to support reliable business intelligence and decision-making.
 <img width="1536" height="1024" alt="Architecture" src="https://github.com/user-attachments/assets/9017d938-3e89-4efa-a31e-8983aef15dce" />
 
 
+
+
 Pipeline:
 
 `CSV / Kaggle → Amazon S3 (Bronze) → AWS Glue ETL → Silver → Gold → Glue Crawler → Glue Data Catalog → Amazon Athena → Tableau Dashboard`
