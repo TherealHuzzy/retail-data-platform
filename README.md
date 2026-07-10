@@ -7,17 +7,22 @@
 
 > This notebook documents the architecture, implementation, monitoring, and analytics of an end-to-end retail data engineering platform built on AWS.
 
+
 # 📌 Executive Summary
 
 This project demonstrates how to build a production-style retail analytics platform using AWS.
 The pipeline ingests raw retail data into Amazon S3, transforms it through a Medallion Architecture,
 validates data quality, orchestrates ETL jobs with AWS Glue Workflow, monitors execution using
 CloudWatch, and exposes business-ready datasets through Athena for visualization in Tableau.
+
+
 # 🎯 Business Problem
 
 Retail businesses generate large volumes of transactional data from multiple operational systems.
 The objective of this project is to centralize, transform, validate, monitor and visualize this data
 to support reliable business intelligence and decision-making.
+
+
 # 🏗️ Solution Architecture
 
 <img width="1536" height="1024" alt="Architecture" src="https://github.com/user-attachments/assets/9017d938-3e89-4efa-a31e-8983aef15dce" />
@@ -30,6 +35,7 @@ Pipeline:
 Monitoring:
 
 `CloudWatch Metrics → CloudWatch Dashboard`
+
 
 # ☁️ Technology Stack
 
@@ -44,6 +50,7 @@ Monitoring:
 | Monitoring | Amazon CloudWatch |
 | Visualization | Tableau |
 | Programming | Python, SQL |
+
 
 # 🗂️ Dataset
 
@@ -60,6 +67,7 @@ Included datasets:
 - Payments
 - Categories
 - Geolocation
+
 
 # 🥇 Medallion Architecture
 
@@ -78,6 +86,7 @@ Included datasets:
 - Analytics-ready datasets
 - Optimized for reporting
 
+
 # ⚙️ ETL Workflow
 
 1. Ingest raw data into Amazon S3 Bronze.
@@ -88,6 +97,8 @@ Included datasets:
 6. Publish CloudWatch Metrics.
 7. Query Gold tables with Athena.
 8. Build executive dashboards in Tableau.
+
+
 # ✅ Data Quality
 
 Implemented validation rules:
@@ -100,6 +111,7 @@ Implemented validation rules:
 
 Quality metrics are published to **Amazon CloudWatch** for operational monitoring.
 
+
 # 📊 Monitoring
 
 CloudWatch monitors:
@@ -111,6 +123,7 @@ CloudWatch monitors:
 - CloudWatch Logs
 
 <img width="1111" height="550" alt="Screenshot 2026-07-10 at 6 45 10 PM" src="https://github.com/user-attachments/assets/cefb1ea1-2354-49eb-8668-f9d22362e3db" />
+
 
 
 # 📈 Tableau Dashboard
@@ -129,6 +142,7 @@ The executive dashboard provides:
 <img width="1367" height="722" alt="Screenshot 2026-07-10 at 6 42 20 PM" src="https://github.com/user-attachments/assets/1b8c8301-fce6-4f63-9ee6-52a6110f330c" />
 
 
+
 # 💡 Key Achievements
 
 - End-to-end AWS Data Pipeline
@@ -139,6 +153,7 @@ The executive dashboard provides:
 - CloudWatch Monitoring
 - Interactive Tableau Dashboard
 
+
 # 🚀 Future Enhancements
 
 - Change Data Capture (CDC)
@@ -147,6 +162,7 @@ The executive dashboard provides:
 - Terraform
 - GitHub Actions CI/CD
 - Apache Iceberg / Delta Lake
+
 
 # 🏁 Conclusion
 
